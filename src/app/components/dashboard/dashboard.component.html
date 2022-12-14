@@ -1,11 +1,11 @@
 <div class="container text-center">
 <div class=" card-box container d-flex flex-row flex-wrap justify-content-center">
-    <div *ngFor="let elem of user" class="card m-2" id="card_sub" style="width: 18rem;">
-        <img class="card-img-top mt-2" src="../../assets/img/profil.png">
+    <div *ngFor="let elem of user" class="border-0 card m-3 p-3" id="card_sub" style="width: 18rem;">
+        <img class="card-img-top" src="../../assets/img/profil.png">
         <div class="card-body">
           <h5 class="card-title"><span class="text-uppercase"> {{ elem.lastname }} </span>
             <br> {{ elem.firstname }} </h5>
-          <a class="btn btn-success" [routerLink]="['/user-detail', elem.user_id]">Voir la fiche</a>
+          <a class="btn btn-success mt-3" [routerLink]="['/user-detail', elem.user_id]">Voir la fiche</a>
         </div>
       </div>
 </div>

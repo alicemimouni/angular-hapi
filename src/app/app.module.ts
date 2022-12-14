@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {FormsModule} from "@angular/forms";
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     DashboardComponent,
     UserDetailComponent,
-    HomeComponent
+    HomeComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
