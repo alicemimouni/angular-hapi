@@ -11,7 +11,7 @@ import {sprintf} from "sprintf-js";
 })
 export class UserService {
 
-  static apiURL = 'http://localhost:1234/getUsers';
+  static apiURL = 'http://localhost:1234/users';
   httpOptions = new HttpHeaders({
     'Content-Type': 'application/json'
   });
@@ -22,12 +22,5 @@ export class UserService {
     getAll(): Observable<User[]> {
       return this.http.get<User[]>(UserService.apiURL);
     }
-
-    getUserById(user_id: number): Observable<Array<User>> {
-      return this.http.get<Array<User>>(
-        sprintf(UserService.apiURL, user_id)
-      );
-    }
-
-    
+  
 }

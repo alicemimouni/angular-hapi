@@ -1,3 +1,22 @@
 <div class="container text-center">
-  <h2> {{pageTitle}} </h2>
+  <h2 class="m-5 text-white bg-dark p-2 pb-3"> {{pageTitle}} </h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="row">NOM</th>
+        <th scope="row">Prénom</th>
+        <th scope="row">Nom utilisateur</th>
+        <th scope="row">Mot de passe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> {{userDetail.lastname | uppercase}} </td>
+        <td> {{userDetail.firstname}} </td>
+        <td> {{userDetail.username}} </td>
+        <td> {{userDetail.password}} </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
