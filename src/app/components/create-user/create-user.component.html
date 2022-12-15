@@ -1,17 +1,17 @@
 <div class="container custom-container">
     <div class="col-md-12">
-      <h3 class="mb-3 text-center">Ajouter un abonné</h3>
+      <h3 class="mb-3 text-center text-white bg-dark p-3 mb-5">Ajouter un abonné</h3>
       <div class="form-group">
-        <input type="text" [(ngModel)]="userDetails.lastname" class="form-control" placeholder="Nom">
+        <input type="text" [(ngModel)]="userDetails.lastname" class="form-control mb-3" placeholder="Nom">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="userDetails.firstname" class="form-control" placeholder="Prénom">
+        <input type="text" [(ngModel)]="userDetails.firstname" class="form-control mb-3" placeholder="Prénom">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="userDetails.username" class="form-control" placeholder="Nom utilisateur">
+        <input type="text" [(ngModel)]="userDetails.username" class="form-control mb-3" placeholder="Nom utilisateur">
       </div>
       <div class="form-group">
-        <input type="text" [(ngModel)]="userDetails.password" class="form-control" placeholder="Mot de passe">
+        <input type="text" [(ngModel)]="userDetails.password" class="form-control mb-3" placeholder="Mot de passe">
       </div>
       <div class="form-group">
         <button class="btn btn-success btn-lg btn-block" (click)="addUser(userDetails)">Ajouter</button>

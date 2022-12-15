@@ -32,4 +32,21 @@ export class UserDetailComponent implements OnInit {
     this.router.navigate(['/dashboard']);
   }
 
+   // Get user list
+   loadUser() {
+    return this.service.getAll().subscribe((data: {}) => {
+      this.userDetail = data;
+    });
+  }
+
+  // Delete user
+  deleteUser(user_id: any) {
+    if (window.confirm('Etes vous sur de vouloir supprimer cet abonné ?')) {
+      this.service.deleteUser(user_id).subscribe((data) => {
+        this.loadUser();
+      });
+    }
+    alert('Abonné supprimé !');
+    this.gotoUsers();
+  }
 }

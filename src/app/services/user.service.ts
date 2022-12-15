@@ -23,20 +23,36 @@ export class UserService {
     }
 
     // get one user by user_id
-    getUser(user_id: any): Observable <User> {
+    getUser(user_id: number): Observable <User> {
       return this.http
         .get < User > (UserService.apiURL + '/' + user_id)
         .pipe(retry(1), catchError(this.handleError));
     }
 
 
-    // create new user
+  // create new user
   createUser(user: any): Observable <User> {
-    let body = {}
-    return this.http.post<User>(UserService.apiURL + '/new',
-       body,
+      return this.http.post<User>(UserService.apiURL + '/new',
+       JSON.stringify(user),
         { headers: this.httpOptions }).pipe(retry(1), catchError(this.handleError));
   }
+
+  // remove user
+  deleteUser(user_id: number) {
+    return this.http
+      .delete<User>(UserService.apiURL + '/delete/' + user_id, { headers: this.httpOptions })
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+  // update user
+  updateUser(user_id: number, user: any): Observable<User> {
+    return this.http
+      .put<User>(
+        UserService.apiURL + '/' + user_id,
+        JSON.stringify(user),
+        { headers: this.httpOptions }).pipe(retry(1), catchError(this.handleError));
+  }
+
 
   // Error handling
   handleError(error: any) {

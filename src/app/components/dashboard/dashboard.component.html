@@ -1,14 +1,15 @@
-<div class="container text-center">
-<div class=" card-box container d-flex flex-row flex-wrap justify-content-center">
+<div class="container text-center d-flex flex-column justify-content-center align-items-center">
+  <div class="buttons d-flex align-items-start">
+    <a class="btn btn-primary m-3" routerLink="/create-user">Ajouter un abonné</a>
+  </div>
+  <div class=" card-box container d-flex flex-row flex-wrap justify-content-center">
     <div *ngFor="let elem of user" class="border-0 card m-3 p-3" id="card_sub" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/profil.png">
-        <div class="card-body">
-          <h5 class="card-title"><span class="text-uppercase"> {{ elem.lastname }} </span>
-            <br> {{ elem.firstname }} </h5>
-          <a class="btn btn-success mt-3" [routerLink]="['/user-detail', elem.user_id]">Voir la fiche</a>
-        </div>
+      <img class="card-img-top" src="../../assets/img/profil.png">
+      <div class="card-body">
+        <h5 class="card-title"><span class="text-uppercase"> {{ elem.lastname }} </span>
+          <br> {{ elem.firstname }} </h5>
+        <a class="btn btn-success mt-3" [routerLink]="['/user-detail', elem.user_id]">Voir la fiche</a>
       </div>
+    </div>
+  </div>
 </div>
-</div>    
-
-

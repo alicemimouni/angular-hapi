@@ -18,6 +18,10 @@
       </tr>
     </tbody>
   </table>
-  <a class="btn btn-success" routerLink="/dashboard">Retour à la liste des abonnés</a>
+  <div class="buttons d-flex align-items-start">
+    <a class="btn btn-primary m-3" [routerLink]="['/edit-user', userDetail.user_id]">Éditer la fiche</a>
+    <a class="btn btn-danger m-3" (click)="deleteUser(userDetail.user_id)">Supprimer la fiche</a>
+  </div>
+  <a class="btn btn-success m-3" routerLink="/dashboard">Retour à la liste des abonnés</a>
 </div>
 

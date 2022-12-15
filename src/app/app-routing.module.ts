@@ -4,12 +4,14 @@ import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'user-detail/:user_id', component: UserDetailComponent},
   {path: 'home', component: HomeComponent},
   {path: 'create-user', component: CreateUserComponent},
+  {path: 'edit-user/:user_id', component: EditUserComponent},
   {path: '',  redirectTo: '/home', pathMatch: 'full'}
   ];
 
